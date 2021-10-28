@@ -61,7 +61,7 @@ const Svg = (props) => {
   useEffect(() => {
     init();
     let btn = document.querySelector("button.spinBtn");
-    btn.classList.add("pulse");
+    btn.classList.add("pulse", "m-t-2");
   }, []);
 
   const click = async () => {
@@ -70,7 +70,6 @@ const Svg = (props) => {
 
     let btn = document.querySelector("button.spinBtn");
     btn.classList.remove("pulse");
-    // spin(ctr);
     await drop();
     upd({
       ...pop,
@@ -94,7 +93,7 @@ const Svg = (props) => {
       {mob && <Stats spins={spins} bal={bal} />}
       {mob && (
         <button
-          className="btn btn-grad w-30 cursor trans spinBtn"
+          className="btn btn-grad w-30 cursor trans spinBtn m-t-2"
           onClick={click}
         >
           SPIN NOW
