@@ -2,42 +2,72 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <title>Galaxy Spinner</title>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script type="text/javascript">
+      window.txt = {
+        greet: {
+          head: "Greetings of Free spins!",
+          mes: "Grab your chance to win $1000 and FREE SPINS as welcome bonus by using 5 free spins only available today!",
+        },
+        how: {
+          head: "How to Play and Win",
+          color: "RED",
+          mes1: "Test your luck and try to win by pulling the ",
+          mes2: " lever of the Machine on the right. Good Luck!",
+        },
+        terms: {
+          head: "Terms and Condition",
+          mes: `        To enhance your experience on our site, we use 'cookies'. By browsing
+        our site you accept this.This is a third-party promotion and the
+        promoted product is not responsible for this site.You must be 18+ years
+        (or the legal age of gambling where you live) to use our page. If you
+        are not please leave`,
+        },
+        pop: {
+          wel: {
+            head: "Spin the Wheel & win up to $1000 welcome bonus",
+            img: "./img/astronaut.png",
+            bold: "Take the chance",
+            mes: "Welcome to our Galaxy Spinner get the chance to win up to $1000 and FREE SPINS as welcome bonus with a simple click of your mouse or your finger",
+            btn: "Start the Adventure",
+          },
+          lose: {
+            head: "YOU LOST $50",
+            img: "./img/ufo.png",
+            bold: "Don’t Worry Human",
+            mes: "You may have lost this time but you still have alot of spins left keep going!",
+            btn: "PROCEED",
+          },
+          win: {
+            head: "JACKPOT!",
+            cash: "YOU WON 80 FREE SPINS",
+            img: "./img/astronaut.png",
+            bold: "CONGRATULATIONS",
+            mes: "That's AMAZING! You won 80 free spins on your next visit to proceed click the button below",
+            mes2: "That's AMAZING! You won $1000 and 80 Free spins to claim your prize click the button below",
+            btn: "CLAIM YOUR PRIZE",
+          },
+        },
+        spins: {
+          txt: "SPINS",
+          val: 5,
+        },
+        bal: {
+          txt: "BANK",
+          val: 250,
+        },
+      };
+    </script>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+  <body class="bg-img h-vh w-100 ovr-hide">
+    <div id="root" class="w-100 h-100 ovr-hide"></div>
   </body>
 </html>

@@ -1,0 +1,188 @@
+@media only screen and (min-width: 481px) and (max-width: 1000px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  small {
+    text-align: center !important;
+    width: 100% !important;
+  }
+  button {
+    width: 80% !important;
+  }
+
+  section {
+    width: 100% !important;
+  }
+  .popCont {
+    width: 80% !important;
+  }
+  svg {
+    width: 80% !important;
+  }
+
+  .doors {
+    padding: 20px !important;
+    width: 60%;
+    height: 35%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 481px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  small {
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .spinDiv {
+    height: 40%;
+    .doors {
+      padding: 20px !important;
+      width: 70% !important;
+      height: 35% !important;
+      padding: 0 !important;
+    }
+  }
+
+  // #slot {
+  //   height: 60% !important;
+  // }
+
+  .how {
+    h4,
+    p {
+      text-align: start !important;
+    }
+  }
+
+  section {
+    justify-content: space-around !important;
+    width: 100% !important;
+    height: 100% !important;
+    &.greet {
+      div {
+        justify-content: space-evenly !important;
+        align-items: center !important;
+        height: 80% !important;
+        h4,
+        button {
+          margin-top: 3% !important;
+        }
+      }
+    }
+    &.mob {
+      .terms {
+        width: 90% !important;
+      }
+    }
+  }
+
+  .pop {
+    .popCont {
+      width: 90% !important;
+    }
+  }
+
+  .bg-trans {
+    width: auto !important;
+  }
+
+  .terms {
+    position: absolute;
+    bottom: 2%;
+  }
+
+  svg {
+    width: 90% !important;
+  }
+
+  .stat {
+    .bg-trans {
+      width: 50% !important;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .how {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1000px) and (orientation: landscape) {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  small {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  section {
+    width: 100% !important;
+    height: 100% !important;
+    .bg-trans {
+      padding: 10px !important;
+      width: 80% !important;
+    }
+    &.mob {
+      .terms {
+        width: 90% !important;
+      }
+    }
+  }
+
+  .termsTxt {
+    display: none;
+  }
+
+  #slot {
+    width: 65% !important;
+    margin-right: 5% !important;
+    margin-bottom: 8% !important;
+  }
+
+  .doors {
+    width: 45% !important;
+    margin-right: 5% !important;
+    height: 50% !important;
+  }
+  .title,
+  .terms {
+    display: none !important;
+  }
+  .pop {
+    .popCont {
+      justify-content: space-around;
+      width: 80% !important;
+      height: auto !important;
+      img {
+        width: 20% !important;
+      }
+      div {
+        padding: 5px !important;
+      }
+      button {
+        margin-top: 2% !important;
+      }
+    }
+  }
+  .terms {
+    display: none;
+  }
+}
+
+/* Portrait IPAD */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+}
+
+@media only screen and (min-width: 1400px) {
+}

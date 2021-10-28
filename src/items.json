@@ -1,0 +1,18 @@
+[
+  {
+    "src": "./img/icon2.svg",
+    "alt": "jackpot"
+  },
+  {
+    "src": "./img/icon1.svg",
+    "alt": "warn"
+  },
+  {
+    "src": "./img/icon3.svg",
+    "alt": "back"
+  },
+  {
+    "src": "./img/icon4.svg",
+    "alt": "cash"
+  }
+]
