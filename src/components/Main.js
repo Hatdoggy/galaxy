@@ -56,9 +56,28 @@ const Svg = (props) => {
   const { pop, upd, spin, size, set } = props;
 
   const { spins, bal, mob } = props;
+  const { welc, lose, win, ctr, show } = pop;
+
   useEffect(() => {
     init();
+    let btn = document.querySelector("button.spinBtn");
+    btn.classList.add("pulse");
   }, []);
+
+  const click = async () => {
+    let headBtn = document.querySelector(".headBtn");
+    headBtn.style.animation = "";
+
+    let btn = document.querySelector("button.spinBtn");
+    btn.classList.remove("pulse");
+    // spin(ctr);
+    await drop();
+    upd({
+      ...pop,
+      show: true,
+      ctr: ctr - 1,
+    });
+  };
 
   return (
     <section
@@ -68,11 +87,19 @@ const Svg = (props) => {
     >
       {mob && <h4 className="days txt-wht w-100 title">GALACTIC SPINNER</h4>}
 
-      <div className="w-100 h-100 pos-rel flx flx-jc-ce flx-ai-ce spinDiv">
+      <div className="w-100 h-100 pos-rel flx flx-col flx-jc-ce flx-ai-ce spinDiv">
         <Spinner pop={pop} upd={upd} size={size} set={set} />
         <Spins pop={pop} mob={mob} spin={spin} />
       </div>
       {mob && <Stats spins={spins} bal={bal} />}
+      {mob && (
+        <button
+          className="btn btn-grad w-30 cursor trans spinBtn"
+          onClick={click}
+        >
+          SPIN NOW
+        </button>
+      )}
       {mob && <Terms />}
     </section>
   );

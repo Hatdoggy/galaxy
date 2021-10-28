@@ -1359,6 +1359,11 @@ small {
   -webkit-animation: pulse 1.5s infinite;
 }
 
+.pulse {
+  -webkit-animation: 1s pulse infinite;
+          animation: 1s pulse infinite;
+}
+
 @keyframes pulse {
   0% {
     -webkit-transform: scale(1);
@@ -1367,8 +1372,8 @@ small {
             box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
   }
   70% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
     -webkit-box-shadow: 0 0 0 10px rgba(255, 121, 63, 0);
             box-shadow: 0 0 0 10px rgba(255, 121, 63, 0);
   }
