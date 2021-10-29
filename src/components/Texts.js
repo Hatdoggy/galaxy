@@ -10,15 +10,14 @@ const Greet = () => {
 const How = () => {
   return (
     <div className="w-80 flx flx-jc-ce flx-ai-ce bg-trans p-20 flx flx-jc-ce fade-l how">
-      <div className="w-80 flx flx-col flx-jc-ce flx-ai-ce">
+      <div className="w-100 flx flx-col flx-jc-ce flx-ai-ce">
         <h4 className="days txt-wht w-100">{window.txt.how.head}</h4>
         <p className="mono txt-wht m-t-2">
           {window.txt.how.mes1}
-          <span className="txt-red days">{window.txt.how.color}</span>
+          <span className=" days">{window.txt.how.color}</span>
           {window.txt.how.mes2}
         </p>
       </div>
-      <img src="./img/lever.png" alt="lever" className="m-l-auto" />
     </div>
   );
 };

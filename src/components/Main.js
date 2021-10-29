@@ -16,7 +16,6 @@ const Left = (props) => {
   const click = async () => {
     let headBtn = document.querySelector(".headBtn");
     headBtn.style.animation = "";
-    // spin(ctr);
     await drop();
     upd({
       ...pop,
@@ -25,17 +24,9 @@ const Left = (props) => {
     });
   };
 
-  // useEffect(() => {
-  //   set(new Slot(document.getElementById("slot"), config));
-  // }, []);
-
-  // useEffect(() => {
-  //   handleResize();
-  // }, [size]);
-
   return (
     <section className="w-50 h-100 flx flx-col flx-jc-sp flx-ai-ce p-20 fade-l left">
-      <h4 className="days txt-wht w-100">GALACTIC SPINNER</h4>
+      <h4 className="days txt-wht w-100">{window.txt.title}</h4>
       <Greet />
       <How />
       {!mob && <Stats spins={spins} bal={bal} />}
@@ -44,7 +35,7 @@ const Left = (props) => {
           className="btn btn-grad w-30 cursor trans spinBtn"
           onClick={click}
         >
-          SPIN NOW
+          {window.txt.btn}
         </button>
       )}
       {!mob && <Terms />}
@@ -84,7 +75,7 @@ const Svg = (props) => {
         !mob ? " flx-jc-ce" : "flx-col  flx-jc-ce ovr-hide"
       }`}
     >
-      {mob && <h4 className="days txt-wht w-100 title">GALACTIC SPINNER</h4>}
+      {mob && <h4 className="days txt-wht w-100 title">{window.txt.title}</h4>}
 
       <div className="w-100 h-100 pos-rel flx flx-col flx-jc-ce flx-ai-ce spinDiv">
         <Spinner pop={pop} upd={upd} size={size} set={set} />
@@ -96,7 +87,7 @@ const Svg = (props) => {
           className="btn btn-grad w-30 cursor trans spinBtn m-t-2"
           onClick={click}
         >
-          SPIN NOW
+          {window.txt.btn}
         </button>
       )}
       {mob && <Terms />}
