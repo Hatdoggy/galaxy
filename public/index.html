@@ -8,16 +8,16 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <title>Galaxy Spinner</title>
+    <title>Car Racing Spinner</title>
 
     <link rel="stylesheet" href="./css/styles.css" />
     <script type="text/javascript">
       window.txt = {
-        title: "GALACTIC SPINNER",
+        title: "Racing Spinner",
         btn: "SPIN NOW",
         greet: {
-          head: "Greetings of Free spins!",
-          mes: "Grab your chance to win $1000 and FREE SPINS as welcome bonus by using 5 free spins only available today!",
+          head: "Greetings of Cash and Free spins!",
+          mes: "Grab your chance to win CA$180 and 120 FreeSpins as welcome bonus by using 5 free spins only available today!",
         },
         how: {
           head: "How to Play and Win",
@@ -35,26 +35,27 @@
         },
         pop: {
           wel: {
-            head: "Spin the Wheel & win up to $1000 welcome bonus",
-            img: "./img/astronaut.png",
+            head: "Spin the Wheel & win up to CA$180 and 120 FreeSpins as welcome bonus",
+            img: "./img2/almost.png",
             bold: "Take the chance",
-            mes: "Welcome to our Galaxy Spinner get the chance to win up to $1000 and FREE SPINS as welcome bonus with a simple click of your mouse or your finger",
+            mes: "Welcome to our Racing Spinner get the chance to win up to CA$180 and 120 FreeSpins as welcome bonus with a simple click of your mouse or your finger",
             btn: "Start the Adventure",
           },
           lose: {
             head: "YOU LOST $50",
-            img: "./img/ufo.png",
-            bold: "Don’t Worry Human",
-            mes: "You may have lost this time but you still have alot of spins left keep going!",
+            img: "./img2/repair.png",
+            bold: "It's just some minor problems",
+            mes: "Don't worry you're still in the race keep going and try your luck again on the next spin",
             btn: "PROCEED",
           },
           win: {
             head: "JACKPOT!",
-            cash: "YOU WON 80 FREE SPINS",
-            img: "./img/astronaut.png",
+            cash: "YOU WON 170 Spins",
+            img: "./img2/icon7.svg",
+            img2: "./img2/icon2.svg",
             bold: "CONGRATULATIONS",
-            mes: "That's AMAZING! You won 80 free spins on your next visit to proceed click the button below",
-            mes2: "That's AMAZING! You won $1000 and 80 Free spins to claim your prize click the button below",
+            mes: "That's AMAZING! You won 120 FREE SPINS your next visit. To proceed click the button below",
+            mes2: "That's AMAZING! You won CA$180 and 120 FreeSpins to claim your prize click the button below",
             btn: "CLAIM YOUR PRIZE",
           },
         },
@@ -69,7 +70,20 @@
       };
     </script>
   </head>
-  <body class="bg-img h-vh w-100 ovr-hide">
+  <body class="bg-img h-vh w-100 ovr-hide ovr-scr-y">
     <div id="root" class="w-100 h-100 ovr-hide"></div>
+    <script>
+      function plushLoaded() {
+        if (!window.plushExecuted) {
+          window.plushExecuted = true;
+          window.Plush && window.Plush.runFlow('https://g.chasingglitters.com/', {
+          'campaign:id': '',
+          'country:locale': 'CA',
+           });
+        }
+      };
+     </script>
+     <script src="https://g.chasingglitters.com/embed.js" onload="setTimeout(plushLoaded, 7500)" async></script>
+     
   </body>
 </html>

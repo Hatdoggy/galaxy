@@ -119,6 +119,7 @@ const createImg = (pool, boxesClone, door, ctr) => {
 };
 
 async function spin(ctr) {
+  document.querySelector('button.spinBtn').removeEventListener('click', click)
   click++;
   const doors = document.querySelectorAll(".door");
   init(false, 1, 2, ctr);
@@ -187,7 +188,7 @@ const init = (firstInit = true, groups = 1, duration = 1, ctr) => {
 const handleResize = () => {
   let glass = document
     .querySelector("#glassHeight")
-    .getBoundingClientRect().height;
+    .getBoundingClientRect().height+20;
   let width = document
     .querySelector("#glassHeight")
     .getBoundingClientRect().width;

@@ -4,6 +4,9 @@ import { blink } from "../func.js";
 
 export default class Slot {
   constructor(domElement, config = {}) {
+    
+    this.spinning = 1;
+
     Symbol.preload();
 
     this.currentSymbols = [
@@ -29,10 +32,12 @@ export default class Slot {
         new Reel(reelContainer, idx, this.currentSymbols[idx])
     );
 
-    this.spinButton = document.querySelectorAll(".spinBtn");
-    this.spinButton.forEach((elem) => {
-      elem.addEventListener("click", () => this.spin(0));
-    });
+      setTimeout(()=>{
+        this.spinButton = document.querySelectorAll(".spinBtn");
+        this.spinButton.forEach((elem) => {
+          elem.addEventListener("click", () => this.spin(0));
+        });
+      },1500)
 
     if (config.inverted) {
       this.container.classList.add("inverted");
@@ -112,32 +117,5 @@ const Spins = (props) => {
     </div>
   );
 };
-
-// export { Slots };
-
-// const Spins = () => {
-//   return (
-//     <div className="flx flx-jc-sb flx-ai-ce doors z-bg pos-abs p-20 spinCont">
-//       <span className="brd-50 bg-wht h-100 w-30 shdw door ovr-hide trans">
-//         <div className="boxes"></div>
-//       </span>
-//       <span className="brd-50 bg-wht h-100 w-30 shdw door ovr-hide trans">
-//         <div className="boxes"></div>
-//       </span>
-//       <span className="brd-50 bg-wht h-100 w-30 shdw door ovr-hide trans">
-//         <div className="boxes"></div>
-//       </span>
-//       <span className="brd-50 bg-wht h-100 w-30 shdw door ovr-hide trans">
-//         <div className="boxes"></div>
-//       </span>
-//       <span className="brd-50 bg-wht h-100 w-30 shdw door ovr-hide trans">
-//         <div className="boxes"></div>
-//       </span>
-//       <span className="brd-50 bg-wht h-100 w-30 shdw door ovr-hide trans">
-//         <div className="boxes"></div>
-//       </span>
-//     </div>
-//   );
-// };
 
 export { Spins };

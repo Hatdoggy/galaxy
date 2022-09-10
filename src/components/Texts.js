@@ -26,11 +26,11 @@ const Stats = (props) => {
   const { spins, bal } = props;
   return (
     <div className="flx flx-jc-ce flx-ai-ce w-80 fade-l stat">
-      <div className="bg-trans p-20 flx w-30">
+      <div className="bg-trans p-20 flx w-30 m-r-1">
         <p className="days txt-wht">{window.txt.spins.txt}</p>
         <p className="days txt-wht m-l-auto">{spins}</p>
       </div>
-      <div className="bg-trans p-20 flx m-l-auto w-30">
+      <div className="bg-trans p-20 flx m-l-auto w-30 m-l-2">
         <p className="days txt-wht">{window.txt.bal.txt}</p>
         <p className="days txt-wht m-l-auto">${bal}</p>
       </div>

@@ -17,6 +17,7 @@ const Welcome = (props) => {
       show: false,
       welc: false,
       lose: true,
+      welcClk:true,
     });
     setTimeout(() => {
       spin(true);
@@ -28,7 +29,7 @@ const Welcome = (props) => {
       <h4 className="days txt-wht w-100 txt-al-ce">
         {window.txt.pop.wel.head}
       </h4>
-      <img src={window.txt.pop.wel.img} alt="astro" className="w-30" />
+      <img src={window.txt.pop.wel.img} alt="astro" className="w-80" />
       <h4 className="w-100 txt-al-ce txt-wht days">
         {window.txt.pop.wel.bold}
       </h4>
@@ -88,7 +89,7 @@ const Lose = (props) => {
         {window.txt.pop.lose.bold}
       </h4>
       <p className="w-100 txt-al-ce txt-wht mono">{window.txt.pop.lose.mes}</p>
-      <button className="btn btn-trans w-80" onClick={clicked}>
+      <button className="btn btn-trans w-80 days" onClick={clicked}>
         {window.txt.pop.lose.btn}
       </button>
     </div>
@@ -130,7 +131,7 @@ const Win = (props) => {
       <h2 className="days txt-wht w-100 txt-al-ce">
         {ctr === 2 ? window.txt.pop.win.cash : window.txt.pop.win.head}
       </h2>
-      <img src={window.txt.pop.win.img} alt="astro" className="w-30" />
+      <img src={ctr === 2 ?window.txt.pop.win.img:window.txt.pop.win.img2} alt="astro" className="w-80" />
       <h4 className="w-100 txt-al-ce txt-wht days">
         {window.txt.pop.win.bold}
       </h4>

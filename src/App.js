@@ -22,6 +22,8 @@ function App() {
     win: false,
     ctr: ndx,
     bal: bal,
+    welcClk:false,
+    spn:false,
   });
 
   useEffect(() => {

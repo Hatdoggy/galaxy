@@ -8,7 +8,7 @@ export default class Symbol {
       this.img = cache[name].cloneNode();
     } else {
       this.img = new Image();
-      this.img.src = `./img/${name}.svg`;
+      this.img.src = `./img2/${name}.svg`;
 
       cache[name] = this.img;
     }

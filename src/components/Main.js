@@ -11,11 +11,20 @@ const config = {
 
 const Left = (props) => {
   const { spins, bal, mob, slot, spin, pop, upd, size, set } = props;
-  const { welc, lose, win, ctr, show } = pop;
+  const { welcClk, lose, win, ctr, spn } = pop;
 
   const click = async () => {
     let headBtn = document.querySelector(".headBtn");
     headBtn.style.animation = "";
+    upd({
+      ...pop,
+      spn:true
+    })
+    
+    document.querySelectorAll('button.btn').forEach((elem)=>{
+      elem.style.display = 'none'
+    })
+
     await drop();
     upd({
       ...pop,
@@ -25,15 +34,15 @@ const Left = (props) => {
   };
 
   return (
-    <section className="w-50 h-100 flx flx-col flx-jc-sp flx-ai-ce p-20 fade-l left">
-      <h4 className="days txt-wht w-100">{window.txt.title}</h4>
+    <section className="w-50 h-100 flx flx-col flx-jc-sp flx-ai-ce p-20 fade-l left" id="leftCont">
+      <img src="./img2/20bet.webp" alt="logo" className="w-30"/>
       <Greet />
       <How />
       {!mob && <Stats spins={spins} bal={bal} />}
       {!mob && (
         <button
           className="btn btn-grad w-30 cursor trans spinBtn"
-          onClick={click}
+          onClick={welcClk?click:undefined}
         >
           {window.txt.btn}
         </button>
@@ -47,7 +56,7 @@ const Svg = (props) => {
   const { pop, upd, spin, size, set } = props;
 
   const { spins, bal, mob } = props;
-  const { welc, lose, win, ctr, show } = pop;
+  const { welcClk, lose, win, ctr, show,spn } = pop;
 
   useEffect(() => {
     init();
@@ -59,8 +68,13 @@ const Svg = (props) => {
     let headBtn = document.querySelector(".headBtn");
     headBtn.style.animation = "";
 
+    document.querySelectorAll('button.btn').forEach((elem)=>{
+      elem.style.display = 'none'
+    })
+
     let btn = document.querySelector("button.spinBtn");
     btn.classList.remove("pulse");
+
     await drop();
     upd({
       ...pop,
@@ -75,7 +89,7 @@ const Svg = (props) => {
         !mob ? " flx-jc-ce" : "flx-col  flx-jc-ce ovr-hide"
       }`}
     >
-      {mob && <h4 className="days txt-wht w-100 title">{window.txt.title}</h4>}
+      {mob && <img src="./img2/20bet.webp" alt="logo" className="w-50"/>}
 
       <div className="w-100 h-100 pos-rel flx flx-col flx-jc-ce flx-ai-ce spinDiv">
         <Spinner pop={pop} upd={upd} size={size} set={set} />
